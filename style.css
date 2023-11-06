@@ -5,7 +5,8 @@
     scroll-behavior: smooth;
 }
 /* Navbar */
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,36 +15,75 @@
     top: 0;
     flex-wrap: wrap;
     z-index: 1;
+    /* padding: 10px 20px; */
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
     list-style: none;
-    margin: 20px 0px;
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
 }
-.navbar ul li{
+
+.navbar ul li {
     font-family: Cinzil;
-    font-size: 1.1rem;
+    font-size: 1rem; 
+    margin: 0 10px; 
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
-    padding: 8px 25px;
+    transition: 0.3s; 
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     box-shadow: 0 0 10px white;
 }
-/* @media all and (max-width:720px){
-    .navbar ul li{
-        font-size: 30px;
-    } */
 
-/* } */
+/* Media Queries for Navbar */
+@media all and (max-width: 720px) {
+    .navbar ul li {
+        font-size: 0.9rem; 
+        margin: 0 8px; 
+    }
+    .navbar{
+        padding: 30px;
+    }
+}
+
+@media all and (max-width: 300px) {
+    .navbar {
+        padding: 10px;
+        width: 320px;
+        justify-content: space-between;
+        
+        
+    }
+
+    .navbar ul li {
+        font-size: 0.6rem;
+        margin: 0 3px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 0.px; 
+    }
+}
+
+@media all and (max-width: 1080px) {
+    .navbar{
+        height: 3vh;
+    }
+    
+}
 
 
-/*Home Section*/
+/* Home */
+
 #home{
     display: flex;
     flex-direction: column;
@@ -106,7 +146,65 @@
     color: black;
     box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
 }
-/* ABOUT */
+
+/* Media Queries for Home */
+
+@media all and (max-width: 1080px) {
+    #home{
+        height: 75vh;
+    }
+}
+@media all and (max-width: 720px) {
+    .headings {
+        font-size: 7rem;
+        margin: 20px 0px;
+        margin-top: 15px;
+        /* height: 100vh; */
+    }
+    #home{
+        height: 70vh;
+    }
+
+    .stuff {
+        font-size: 1.8rem; 
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        margin-bottom: 100px; 
+    }
+}
+
+@media all and (max-width: 300px) {
+    .headings {
+        font-size: 5rem;
+        margin: 10px 0px;
+        margin-top: 15px;
+        
+    }
+
+    .stuff {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        margin-bottom: 50px;
+        margin: 5px;
+    }
+    .main{
+        margin-bottom: 75px;
+    }
+    #home{
+        height: 69vh;
+}
+    }
+
+
+@media all and (max-width: 1080px) {
+}
+/* About */
+
 #about{
     display: flex;
     flex-direction: column;
@@ -126,7 +224,7 @@
 }
 #about{
     background: url(/images/a\ van\ driving\ in\ a\ f.jpg) no-repeat center center/cover;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
     padding-bottom: 5rem;
 }
@@ -141,29 +239,421 @@
     font-size: 18px;
     font-weight: bold;
 }
-/* Skills */
+
+@media all and (max-width: 300px){
+    .ab{
+        font-size: 3.5rem;
+
+    }
+    #intro{
+        font-size: 11.5px;
+        margin-top: 10px;
+    }
+    #about{
+        height: 75vh;
+    }
+
+
+}
+
+
+/* skills */
+
 .card-img-top{
     height: 240px;
+    border-radius: 3px;
 }
-.head{
+.container6{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-bottom: 10rem;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+.kop h1{
     font-family: 'Londrina Outline', sans-serif;
-    font-size: 150px;
+    text-align: center;
+    flex-wrap: wrap;
+    color: aliceblue;
+    font-size: 120px;
+    
+} 
+.card-body1{
+    height: 100px
+}
+
+.card10:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255)30, 230, 230;
+    color: black;
+    box-shadow: 0 0 5px rgb(255, 136, 0), 0 0 10px rgb(255, 136, 0), 0 0 15px rgb(255, 145, 0);
+    height: 350px;
+    
+}
+.card11:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255)30, 230, 230;
+    color: black;
+    box-shadow: 0 0 5px rgb(0, 174, 255), 0 0 10px rgb(0, 195, 255), 0 0 15px rgb(0, 204, 255);
+    height: 350px;
+}
+.card12:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255)30, 230, 230;
+    color: black;
+    box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px white, 0 0 15px rgb(29, 21, 21);
+    height: 370px;
+ 
+}         
+#Skills{
+    background: url(https://i.postimg.cc/c4zPt4qh/images-of-the-beach.jpg) no-repeat center center/cover;
+    
+}
+.rank{
+    font-size: 35px;
+    font-family: 'Londrina Outline', sans-serif;
+    font-weight: bold;
+    color: white;
+
+}
+.paragragph{
+   color: white;
+   font-family: cincel;
+   font-size: 1.3rem;
+}
+
+
+@media all and (max-width: 300px) {
+    .card-img-top {
+        height: 120px;
+    }
+
+    .kop h1 {
+        font-size: 2rem;
+    }
+
+    .rank {
+        font-size: 1.5rem;
+    }
+
+    .paragragph {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* prjects */
+
+#Projects{
+    background: url(https://i.postimg.cc/prPbX0FF/images-of-the-beach-1.jpg) no-repeat center center/cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+}
+.container2{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-bottom: 50rem;
+    object-fit: cover;
+    overflow: hidden;
+    flex-wrap: wrap;
+    
+}
+.img-fluid{
+    height: auto;
+    /* width: 250px; */
+}
+.card-body h1{
+    height: 50px;
+    width: 150px;
+    font-family: 'Londrina Outline', sans-serif;
+    font-size: 1.5rem;
+    font-family: cincel;
+    text-align: center;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: space-evenly; 
+    gap: 3rem;
+    margin: 0px;
+    flex-wrap: wrap;
+}
+.project-heading{
+    font-family: 'Londrina Outline', sans-serif;
+    font-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btn-custom {
+    background-color: #ffffff; 
+    color: #000000;
+    border: 2px solid #000000; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    color: #000000; 
+    background-color: transparent; 
+    cursor: pointer; 
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+.btn-custom:hover {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+.btn-primary{
+    background-color: #ffffff; 
+    color: #000000;
+    border: 2px solid #000000; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    color: #000000; 
+    background-color: transparent; 
+    cursor: pointer; 
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+.btn-primary:hover {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+/* @media all and (max-width: 300px){
+    .project-heading{
+        font-size: 55px
+    }
+} */
+@media all and (max-width: 720px){
+    .project-heading{
+        font-size: 84px;
+    }
+}
+@media all and (max-width: 300px) {
+    .container2 {
+        gap: 0.5rem;
+    }
+
+    .card-body h1 {
+        font-size: 0.8rem;
+    }
+
+    .project-heading {
+        font-size: 3rem;
+    }
+
+    .btn-custom,
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* TESTIMONIALS */
+
+#Testimonials{
+    font-family: cincel;
+}
+
+.testimonials{
+    padding: 40px 0;
+    background: #f1f1f1;
+    color: #434343;
+    text-align: center;
+
+}
+.inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+
+}
+
+.border{
+    width: 160px;
+    height: 5px; 
+    background: #000000;
+    margin: 26px auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
+.col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+.testimonial{
+    background: #fff;
+    padding: 30px;
+}
+.testimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px ;
+}
+@media all and (max-width: 300px) {
+    .col {
+        flex: 100%;
+        max-width: 100%;
+    }
 
-@media all and (max-width:300px){
-    .card{
-        height: 300px;
-        width: 200px;
+    .testimonial img {
+        width: 60px;
+        height: 60px;
     }
-    .intro{
-        font-size: 10px;
-    }
-}
-@media all and (max-width:720px){
-    #Skills{
-        height: 1600px;
+
+    .name {
+        font-size: 14px;
     }
 }
+/* contact */
+#Contact{
+    font-size: cincel;
+
+
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), #4f525c),  url(https://i.postimg.cc/zfYWxMHW/images-of-the-beach-3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+}
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+
+
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #757575;
+    color: #a0a0a0;
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+
+
+}
+.button5{
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+input:focus~label{
+    top: -35px;
+    font-size: 14px;
+
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+
+}
+.row2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row2 , .input-group{
+    flex: basis 48%;
+
+}
+.ending{
+    font-size: 35px;
+    font-family: cincel;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(158, 158, 158)
+}
+
+@media all and (max-width: 720px){
+
+    .ending{
+        /* background: transparent; */
+        background-image: url(/images/forest.jpg);
+        color: white
+        
+    }
+    .hero{
+        height: 110vh;
+        
+    }
+}
+@media all and (max-width: 300px){
+    .ending{
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
